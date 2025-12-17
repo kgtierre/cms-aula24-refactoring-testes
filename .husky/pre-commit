@@ -1,0 +1,27 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Iniciando verificações de pré-commit..."
+
+echo "📋 Executando ESLint..."
+npm.cmd run lint
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint falhou! Corrija os erros antes de commitar."
+  exit 1
+fi
+
+echo "🎨 Verificando formatação com Prettier..."
+npm.cmd run format:check
+if [ $? -ne 0 ]; then
+  echo "❌ Prettier falhou! Execute 'npm run format' para corrigir."
+  exit 1
+fi
+
+echo "🧪 Executando testes..."
+npm.cmd test
+if [ $? -ne 0 ]; then
+  echo "❌ Testes falharam!"
+  exit 1
+fi
+
+echo "✅ Todas as verificações passaram com sucesso!"

@@ -1,0 +1,46 @@
+{
+  "name": "cms-aula24-refactoring-testes",
+  "version": "1.0.0",
+  "description": "CMS com refatora??o e testes automatizados - Aula 24",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\"",
+    "quality": "npm run lint && npm run format:check && npm test",
+    "prepare": "husky install"
+  },
+  "keywords": ["refactoring", "testes", "javascript", "es6", "jest", "eslint"],
+  "author": "Kaylon Gutierre",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.53.0",
+    "prettier": "^3.0.3",
+    "husky": "^8.0.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  }
+}
