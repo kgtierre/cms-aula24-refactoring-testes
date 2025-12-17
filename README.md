@@ -10,25 +10,7 @@ Este projeto demonstra a transformação de código "gambiarra" para código pro
 - Automatizar verificações com GitHub Actions
 - Demonstrar boas práticas de desenvolvimento
 
-## Estrutura do Projeto
 
-cms-aula24/
-├── src/
-│ ├── modules/
-│ │ ├── comentarios-refatorado.js
-│ │ └── database.js
-│ └── tests/
-│ └── comentarios.test.js
-├── .github/workflows/
-│ └── test.yml
-├── .husky/
-│ └── pre-commit
-├── .eslintrc.json
-├── .prettierrc.json
-├── .gitignore
-├── package.json
-├── README.md
-└── index.js
 
 ## Como Executar
 
