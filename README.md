@@ -13,12 +13,22 @@ Este projeto demonstra a transformação de código "gambiarra" para código pro
 ## Estrutura do Projeto
 
 cms-aula24/
-├── src/modules/          # Módulos da aplicação
-├── src/tests/           # Testes unitários
-├── .github/workflows/   # GitHub Actions
-├── .husky/              # Git hooks
-├── index.js             # Ponto de entrada
-└── *.config.js          # Configurações
+├── src/
+│ ├── modules/
+│ │ ├── comentarios-refatorado.js
+│ │ └── database.js
+│ └── tests/
+│ └── comentarios.test.js
+├── .github/workflows/
+│ └── test.yml
+├── .husky/
+│ └── pre-commit
+├── .eslintrc.json
+├── .prettierrc.json
+├── .gitignore
+├── package.json
+├── README.md
+└── index.js
 
 ## Como Executar
 
